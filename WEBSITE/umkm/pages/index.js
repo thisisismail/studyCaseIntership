@@ -34,7 +34,7 @@ export default function Home() {
           <div className="block md:hidden">
             <Typography
               className="border-0"
-              variant="h4"
+              variant="h3"
               color="blue"
               textGradient
             >

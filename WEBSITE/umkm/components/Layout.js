@@ -4,7 +4,7 @@ import Footer from "./Footer.js";
 
 const Layout = ({ children }) => {
   return (
-    <div className="px-0 min-h-screen border-0 overflow-auto flex flex-col bg-white-smoke">
+    <div className="px-0 min-h-screen border-0 overflow-auto flex flex-col bg-gray-50">
       <NavBar />
       <div className="h-16"></div>
       <div
