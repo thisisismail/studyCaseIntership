@@ -6,10 +6,9 @@ import Logo from "./Logo";
 // import Map from './Map';
 
 const Footer = () => {
-  const minWidthBanner = 350;
   return (
     <>
-      <div className="mt-auto w-full bg-black flex flex-col md:flex-row-reverse items-start justify-between md:p-8 p-4 gap-8 h-full border-0">
+      <div className="mt-auto w-full bg-black flex flex-col lg:flex-row-reverse items-start justify-between lg:p-8 p-4 gap-8 h-full border-0">
         <div className="flex flex-col md:flex-row gap-8 text-sm md:text-base">
           <div className="flex gap-8 justify-start md:justify-center h-full border-0 flex-row">
             <div className="flex flex-col border-0 border-blue-500 gap-2 text-blue-500 justify-between w-full">
@@ -64,14 +63,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-row gap-8">
-          <div className="flex flex-col border-white gap-2 items-center w-min border-0">
+          <div className="border-0 flex flex-col border-white gap-2 md:items-center w-full md:w-min ">
             <div
-              style={{ minWidth: minWidthBanner }}
-              className="flex flex-row border-0 border-white  w-min"
+              style={{ width: 350 }}
+              className="flex flex-row border-0 border-white"
             >
-              <Logo width={50} height={50} color="gray" />
+              <Logo />
             </div>
-            <div className=" text-white text-justify text-sm md:text-base">
+            <div className=" text-white text-justify text-sm md:text-base w-full">
               UMKM.ID adalah platform digital yang memfasilitasi promosi produk
               - produk Usaha Mikro Kecil Menengah (UMKM) di Indonesia sebagai
               bentuk dukungan terhadap program pemerintah: Gerakan Ayo UMKM
