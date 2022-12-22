@@ -55,7 +55,7 @@ const Login = () => {
     <>
       <Card
         style={{ maxWidth: 400 }}
-        className="rounded-none mx-auto border-2 w-full"
+        className="rounded-none mx-auto border-0 w-full"
       >
         <div className="w-full border-b-2 text-lg font-bold p-4">{`${
           login ? "MASUK" : "DAFTAR"
