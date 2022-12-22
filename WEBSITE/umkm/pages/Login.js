@@ -45,6 +45,12 @@ const Login = () => {
     return isEmpty;
   };
 
+  const handleKeypress = (e) => {
+    if (e.key === "Enter" && !disableHandler()) {
+      submitHandler();
+    }
+  };
+
   return (
     <>
       <Card
@@ -62,6 +68,7 @@ const Login = () => {
               onChange={inputHandler}
               label="Nama"
               variant="standard"
+              onKeyPress={(e) => handleKeypress(e)}
             />
           </div>
           <Input
@@ -70,6 +77,7 @@ const Login = () => {
             onChange={inputHandler}
             label="Email"
             variant="standard"
+            onKeyPress={(e) => handleKeypress(e)}
           />
           <Input
             name="password"
@@ -78,12 +86,14 @@ const Login = () => {
             label="Password"
             type="password"
             variant="standard"
+            onKeyPress={(e) => handleKeypress(e)}
           />
           <div className={`${!error && "hidden"} text-red-600`}>{error}</div>
           <Button
             onClick={() => submitHandler()}
             className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-none"
             disabled={disableHandler()}
+            tabIndex={`${disableHandler() ? -1 : 0}`}
           >
             {`${login ? "MASUK" : "DAFTAR"}`}
           </Button>

@@ -78,7 +78,7 @@ const DropDownMenu = () => {
         >
           <MenuHandler className={`${!uid && "hidden"} mb-2`}>
             <MenuItem className={`flex flex-row items-start`}>
-              <div className={`${linkStyle} text-blue-900`}>{displayName}</div>
+              <div className={`${linkStyle} text-white`}>{displayName}</div>
               <MdAccountCircle
                 size="30"
                 color="white"
@@ -91,7 +91,7 @@ const DropDownMenu = () => {
               <Button
                 className="flex w-full flex-row justify-center items-center gap-2"
                 color="red"
-                onClick={signOut}
+                onClick={() => signOut()}
               >
                 <MdLogout size={24} className="" />
                 Keluar
