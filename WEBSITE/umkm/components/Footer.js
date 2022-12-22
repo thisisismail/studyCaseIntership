@@ -1,13 +1,32 @@
 import React from "react";
 import Link from "next/link";
+import { Button } from "@material-tailwind/react";
 import { RiInformationFill } from "react-icons/ri";
 import { MdLocationOn } from "react-icons/md";
+import { useUser } from "../context/user.js";
+import { useRouter } from "next/router";
 import Logo from "./Logo";
 // import Map from './Map';
 
 const Footer = () => {
+  const router = useRouter();
+  const user = useUser();
+  const { uid } = user;
   return (
     <>
+      <div
+        className={`${
+          (uid || router.pathname === "/Login") && "hidden"
+        } w-full border-0 flex justify-center py-4 bg-gradient-to-r from-blue-900 to-indigo-900`}
+      >
+        <Button
+          size="lg"
+          onClick={() => router.push("/Login")}
+          className="rounded-none bg-red-600"
+        >
+          DAFTAR SEKARANG
+        </Button>
+      </div>
       <div className="mt-auto w-full bg-black flex flex-col lg:flex-row-reverse items-start justify-between lg:p-8 p-4 gap-8 h-full border-0">
         <div className="flex flex-col md:flex-row gap-8 text-sm md:text-base">
           <div className="flex gap-8 justify-start md:justify-center h-full border-0 flex-row">

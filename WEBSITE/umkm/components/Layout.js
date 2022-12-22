@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
       <NavBar />
       <div className="h-16"></div>
       <div
-        style={{ maxWidth: 1428 }}
+        style={{ maxWidth: 1480 }}
         className="mt-8 w-full border-0 border-black flex-grow mx-auto px-4"
       >
         <div className="">{children}</div>

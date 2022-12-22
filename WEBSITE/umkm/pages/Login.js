@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardBody, Input, Button } from "@material-tailwind/react";
+import { getErrorMessage } from "../services/utils/utils.js";
 import WithoutProtected from "../components/hoc/WithoutProtected.js";
 import {
   signInWithEmail,
@@ -14,7 +15,7 @@ const Login = () => {
   });
   const [login, setLogin] = React.useState(true);
 
-  // const [error, setError] = React.useState(true);
+  const [error, setError] = React.useState("");
 
   React.useEffect(() => {
     login
@@ -23,6 +24,7 @@ const Login = () => {
   }, [login]);
 
   const inputHandler = (e) => {
+    setError("");
     const name = e.target.name;
     const value = e.target.value;
     setUser((prevStates) => ({ ...prevStates, [name]: value }));
@@ -30,8 +32,12 @@ const Login = () => {
 
   const submitHandler = () => {
     login
-      ? signInWithEmail(user.email, user.password)
-      : signUpWithEmail(user.email, user.password, user.username);
+      ? signInWithEmail(user.email, user.password).then(
+          (error) => error && setError(getErrorMessage(error))
+        )
+      : signUpWithEmail(user.email, user.password, user.username).then(
+          (error) => error && setError(getErrorMessage(error))
+        );
   };
 
   const disableHandler = () => {
@@ -55,6 +61,7 @@ const Login = () => {
               value={user.username}
               onChange={inputHandler}
               label="Nama"
+              variant="standard"
             />
           </div>
           <Input
@@ -62,6 +69,7 @@ const Login = () => {
             value={user.email}
             onChange={inputHandler}
             label="Email"
+            variant="standard"
           />
           <Input
             name="password"
@@ -69,10 +77,12 @@ const Login = () => {
             onChange={inputHandler}
             label="Password"
             type="password"
+            variant="standard"
           />
+          <div className={`${!error && "hidden"} text-red-600`}>{error}</div>
           <Button
             onClick={() => submitHandler()}
-            className="bg-gradient-to-r from-cyan-500 to-blue-500"
+            className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-none"
             disabled={disableHandler()}
           >
             {`${login ? "MASUK" : "DAFTAR"}`}

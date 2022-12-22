@@ -57,8 +57,8 @@ const signUpWithEmail = async (email, password, name) => {
     .then(() => updateUser(name))
     .then(() => signOut())
     .then(() => signInWithEmail(email, password))
+    .then(() => signInWithEmail(email, password)) // Make sure user Logged In
     .catch((error) => {
-      console.log(error.code);
       return error.code;
     });
 };
