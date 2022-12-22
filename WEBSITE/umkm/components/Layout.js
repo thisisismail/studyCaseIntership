@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import NavBar from "./NavBar.js";
 import Footer from "./Footer.js";
 
@@ -8,10 +8,10 @@ const Layout = ({ children }) => {
       <NavBar />
       <div className="h-16"></div>
       <div
-        style={{ maxWidth: 1400 }}
-        className="mt-8 w-full border-0 border-black flex-grow mx-auto"
+        style={{ maxWidth: 1428 }}
+        className="mt-8 w-full border-0 border-black flex-grow mx-auto px-4"
       >
-        <div>{children}</div>
+        <div className="">{children}</div>
       </div>
       <div className="mt-40 w-full"></div>
       <Footer />

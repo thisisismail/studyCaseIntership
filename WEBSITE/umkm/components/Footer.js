@@ -72,9 +72,10 @@ const Footer = () => {
               <Logo width={50} height={50} color="gray" />
             </div>
             <div className=" text-white text-justify text-sm md:text-base">
-              UMKM.ID adalah platform digital berbentuk website yang
-              memfasilitasi promosi produk - produk Usaha Mikro Kecil Menengah
-              (UMKM) di Indonesia
+              UMKM.ID adalah platform digital yang memfasilitasi promosi produk
+              - produk Usaha Mikro Kecil Menengah (UMKM) di Indonesia sebagai
+              bentuk dukungan terhadap program pemerintah: Gerakan Ayo UMKM
+              Jualan Online.
               <span></span>
             </div>
           </div>

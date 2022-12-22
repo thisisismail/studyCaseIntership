@@ -1,4 +1,4 @@
-// import { getDatabase, ref } from "firebase/database";
+// import { getDatabase, get, set, ref, child, remove } from "firebase/database";
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -6,14 +6,14 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-// import { app } from "./configFirebase";
+import { app } from "./configFirebase";
 import { InitialUserState } from "../../context/user.js";
 
 // const dataDb = getDatabase(app);
 // get database path within firebase project
 // const dbRef = ref(dataDb);
 
-const auth = getAuth();
+const auth = getAuth(app);
 
 const authStateChanged = async (setUser) => {
   return await onAuthStateChanged(auth, (user) => {
