@@ -34,7 +34,7 @@ const DropDownUser = () => {
           </p>
         </div>
       </MenuHandler>
-      <MenuList className="hidden md:block bg-white border-0 rounded-t-none md:rounded-t-xl mt-0 drop-shadow-sm relative z-40 w-max rounded-none">
+      <MenuList className="hidden duration-500 md:block bg-white border-0 rounded-t-none md:rounded-t-xl mt-0 drop-shadow-sm relative z-40 w-max rounded-none">
         <MenuItem className="hover:bg-white hover:cursor-default">
           <div className="flex flex-col gap-2">
             <Typography

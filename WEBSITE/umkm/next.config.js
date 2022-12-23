@@ -14,6 +14,9 @@ const nextConfig = {
     searchAccKey: process.env.SEARCHACCKEY,
     imageApiProvider: process.env.IMAGEAPIPROVIDER,
   },
+  images: {
+    domains: ["images.unsplash.com"],
+  },
 };
 
 module.exports = nextConfig;

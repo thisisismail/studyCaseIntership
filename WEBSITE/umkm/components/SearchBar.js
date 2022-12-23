@@ -18,7 +18,7 @@ const SearchBar = () => {
         return res.json();
       })
       .then((data) => {
-        setProducts(data);
+        setProducts(data.results);
         console.log(data);
       });
   };
@@ -35,7 +35,7 @@ const SearchBar = () => {
 
   return (
     <>
-      <div className="flex relative broder-2 border-black h-min">
+      <div className="relative border-0 -mt-2">
         <Input
           size="lg"
           name="search"
@@ -44,7 +44,7 @@ const SearchBar = () => {
           label={label}
           variant="standard"
           onKeyPress={(e) => handleKeypress(e)}
-          className="opacity-50"
+          className="opacity-100 md:opacity-50 h-full"
           onFocus={() => setLabel("")}
           onBlur={() => !searchInput && setLabel("Cari produk")}
         />

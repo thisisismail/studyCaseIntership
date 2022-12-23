@@ -1,7 +1,11 @@
+import { Card, CardBody } from "@material-tailwind/react";
+
 const AboutUs = () => {
   return (
     <>
-      <div>About Us</div>
+      <Card className="rounded-none">
+        <CardBody>About Us</CardBody>
+      </Card>
     </>
   );
 };
