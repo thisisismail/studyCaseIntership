@@ -1,10 +1,14 @@
 import React from "react";
+import { ProductsContext } from "../context/products";
 import { Input } from "@material-tailwind/react";
 import { BiSearchAlt } from "react-icons/bi";
 
 const SearchBar = () => {
-  // const { images, setImages } = useContext(ImagesContext);
+  const state = React.useContext(ProductsContext);
+  const { setProducts } = state;
+
   const [searchInput, setInputSearch] = React.useState("");
+  const [label, setLabel] = React.useState("Cari produk");
 
   const searchHandler = async () => {
     await fetch(
@@ -13,7 +17,10 @@ const SearchBar = () => {
       .then((res) => {
         return res.json();
       })
-      .then((data) => console.log(data));
+      .then((data) => {
+        setProducts(data);
+        console.log(data);
+      });
   };
 
   const inputHandler = (e) => {
@@ -34,10 +41,12 @@ const SearchBar = () => {
           name="search"
           value={searchInput}
           onChange={(e) => inputHandler(e)}
-          label="Cari produk"
+          label={label}
           variant="standard"
           onKeyPress={(e) => handleKeypress(e)}
           className="opacity-50"
+          onFocus={() => setLabel("")}
+          onBlur={() => !searchInput && setLabel("Cari produk")}
         />
         <div
           onClick={() => searchHandler()}
