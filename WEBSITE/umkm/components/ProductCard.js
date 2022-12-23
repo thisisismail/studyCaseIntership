@@ -13,7 +13,7 @@ const ProductCard = (props) => {
       >
         <CardBody className="border-0 md:pb-4 flex flex-col p-0">
           <div className="absolute z-20 w-full bg-gray-50 opacity-10 h-8 md:h-14 "></div>
-          <div className="truncate text-black absolute z-30 p-2 md:p-4 text-sm md:text-base">
+          <div className="truncate text-black absolute z-30 p-2 md:p-4 text-sm md:text-base w-full">
             By: {user.name}
           </div>
           <div className="relative aspect-square">
