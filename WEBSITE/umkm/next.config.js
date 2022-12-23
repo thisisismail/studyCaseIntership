@@ -11,6 +11,8 @@ const nextConfig = {
     appId: process.env.APPID,
     measurementId: process.env.MEASUREMENTID,
     databaseURL: process.env.DATABASEURL,
+    searchAccKey: process.env.SEARCHACCKEY,
+    imageApiProvider: process.env.IMAGEAPIPROVIDER,
   },
 };
 

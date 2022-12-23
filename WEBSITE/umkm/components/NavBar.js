@@ -6,6 +6,7 @@ import Logo from "./Logo.js";
 import { useUser } from "../context/user.js";
 import DropDownUser from "./DropDownUser.js";
 import DropDownMenu from "./DropDownMenu.js";
+import SearchBar from "./SearchBar.js";
 
 const NavBar = () => {
   const router = useRouter();
@@ -42,10 +43,15 @@ const NavBar = () => {
           </a>
         </Link>
       </div>
-      <div className="block md:hidden">
+      <div style={{ maxWidth: 1000 }} className="w-1/2 hidden md:block">
+        <SearchBar />
+      </div>
+      <div className="block lg:hidden">
         <DropDownMenu />
       </div>
-      <div className="border-0 gap-8 hidden md:flex">{links}</div>
+      <div style={{ width: 300 }} className="border-0 gap-8 hidden lg:flex">
+        {links}
+      </div>
     </header>
   );
 };

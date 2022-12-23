@@ -1,8 +1,9 @@
 // import { useRouter } from "next/router";
+import React from "react";
 import NavBar from "./NavBar.js";
 import Footer from "./Footer.js";
 
-const Layout = ({ children }) => {
+export const Layout = ({ children }) => {
   return (
     <div className="px-0 min-h-screen border-0 overflow-auto flex flex-col bg-gray-50">
       <NavBar />

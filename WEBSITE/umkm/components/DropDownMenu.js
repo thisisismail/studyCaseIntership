@@ -67,7 +67,7 @@ const DropDownMenu = () => {
           />
         </Button>
       </MenuHandler>
-      <MenuList className="bg-gradient-to-r from-cyan-300 md:to-blue-600 to-blue-500 md:hidden border-0 -mt-2 rounded-none w-full drop-shadow-xl relative z-40">
+      <MenuList className="bg-gradient-to-r from-cyan-300 md:to-blue-600 to-blue-500 lg:hidden border-0 -mt-2 rounded-none w-full drop-shadow-xl relative z-40">
         {menu}
         <Menu
           placement="bottom-end"
@@ -86,8 +86,8 @@ const DropDownMenu = () => {
               />
             </MenuItem>
           </MenuHandler>
-          <MenuList className="md:hidden bg-gradient-to-r from-cyan-300 md:to-blue-600 to-blue-500 border-0 rounded-none  drop-shadow-xl relative z-40 w-full">
-            <MenuItem className="md:hidden">
+          <MenuList className="lg:hidden bg-gradient-to-r from-cyan-300 md:to-blue-600 to-blue-500 border-0 rounded-none  drop-shadow-xl relative z-40 w-full">
+            <MenuItem className="lg:hidden">
               <Button
                 className="flex w-full flex-row justify-center items-center gap-2"
                 color="red"
