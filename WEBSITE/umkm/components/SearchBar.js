@@ -1,9 +1,11 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { ProductsContext } from "../context/products";
 import { Input } from "@material-tailwind/react";
 import { BiSearchAlt } from "react-icons/bi";
 
 const SearchBar = () => {
+  const router = useRouter();
   const state = React.useContext(ProductsContext);
   const { setProducts } = state;
 
@@ -20,7 +22,8 @@ const SearchBar = () => {
       .then((data) => {
         setProducts(data.results);
         console.log(data);
-      });
+      })
+      .then(() => router.push("/Products"));
   };
 
   const inputHandler = (e) => {
