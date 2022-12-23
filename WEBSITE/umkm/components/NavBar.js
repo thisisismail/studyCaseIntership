@@ -34,7 +34,7 @@ const NavBar = () => {
   });
 
   return (
-    <header className="fixed w-full z-50 top-0 h-16 border-0 flex justify-between items-center px-4 md:px-8 text-lg font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-500 drop-shadow-sm">
+    <header className="fixed w-full z-50 top-0 h-16 border-0 flex justify-between items-center px-4 md:px-8 text-lg font-bold text-white bg-gradient-to-r from-cyan-300 md:to-blue-600 to-blue-500 drop-shadow-md">
       <div className="relative z-50 border-0 h-full text-center flex items-center">
         <Link href="/" className="block w-full h-full">
           <a className="grid w-full border-0 h-full text-center content-center">

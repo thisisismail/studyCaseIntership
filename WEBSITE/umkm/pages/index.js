@@ -52,7 +52,7 @@ export default function Home() {
           </div>
           <Button
             onClick={() => router.push("/Products")}
-            className="bg-gradient-to-r from-cyan-500 to-blue-500 mt-4 rounded-none"
+            className="bg-gradient-to-r from-cyan-300 to-blue-500 mt-4 rounded-none"
             size="lg"
           >
             LIHAT PRODUK

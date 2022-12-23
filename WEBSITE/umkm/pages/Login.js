@@ -91,7 +91,7 @@ const Login = () => {
           <div className={`${!error && "hidden"} text-red-600`}>{error}</div>
           <Button
             onClick={() => submitHandler()}
-            className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-none"
+            className="bg-gradient-to-r from-cyan-300 to-blue-500 rounded-none"
             disabled={disableHandler()}
             tabIndex={`${disableHandler() ? -1 : 0}`}
           >

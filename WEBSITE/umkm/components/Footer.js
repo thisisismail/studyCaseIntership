@@ -17,7 +17,7 @@ const Footer = () => {
       <div
         className={`${
           (uid || router.pathname === "/Login") && "hidden"
-        } w-full border-0 flex justify-center py-4 bg-gradient-to-r from-blue-900 to-indigo-900`}
+        } w-full border-0 flex justify-center py-4 bg-gradient-to-r from-blue-800 to-indigo-900`}
       >
         <Button
           size="lg"
